@@ -34,6 +34,6 @@ namespace Bridge
         public string VehicleType()
         {
                        return "Car";
-        }
+        }   
     }
 }
