@@ -33,6 +33,11 @@ namespace Bridge
         public DateTime Date { get; set; }
 
         /// <summary>
+        /// If Brobizz is used, discount is given.
+        ///</summary>
+        public bool Brobizz { get; set; }
+
+        /// <summary>
         /// returns the fixed price crossing vehicle.
         /// Must be implemented in derived/child classes.
         /// </summary>
@@ -45,5 +50,15 @@ namespace Bridge
         /// </summary>
         /// <returns>A string representing the type of the vehicle, such as "Car", "Truck", or "Motorcycle".</returns>
         public abstract string VehicleType();
+
+        public double DiscountedPrice()
+        {
+            var price = Price();
+            if (Brobizz)
+            {
+                return price * 0.95; // 5% discount
+            }
+            return price;
+        }
     }
 }

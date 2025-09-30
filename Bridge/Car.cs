@@ -30,6 +30,11 @@ namespace Bridge
             return 230.0;
         }
 
+        public object PricedDiscount()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// inherits from VehicleBase.
         /// </summary>

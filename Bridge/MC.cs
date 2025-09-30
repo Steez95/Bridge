@@ -32,6 +32,11 @@ namespace Bridge
             return 120.0;
         }
 
+        public object PricedDiscount()
+        {
+            throw new NotImplementedException();
+        }
+
         public object Vehicle()
         {
             throw new NotImplementedException();
