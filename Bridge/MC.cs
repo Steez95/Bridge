@@ -11,7 +11,7 @@ namespace Bridge
     /// </summary>
     /// <remarks>This class provides a property to store and retrieve the license plate number of the
     /// motorcycle.</remarks>
-    public class MC
+    public class MC : VehicleBase
     {
         /// <summary>
         /// Gets or sets the license plate number of the motorcycle.
@@ -19,7 +19,7 @@ namespace Bridge
         public string Licenseplate { get; set; }
 
         /// <summary>
-        /// Gets or sets the date and time of the crossing.
+        /// inherits from VehicleBase.
         /// </summary>
         public DateTime Date { get; set; }
 
@@ -27,16 +27,21 @@ namespace Bridge
         /// Gets the fixed price of a motorcycle crossing.
         /// </summary>
         /// <returns>The price of the item as a <see cref="double"/>.</returns>
-        public double Price()
+        public override double Price()
         {
             return 120.0;
         }
 
+        public object Vehicle()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
-        /// Gets the type of the vehicle.
+        /// inherits from VehicleBase.
         /// </summary>
         /// <returns>A string representing the vehicle type. The default value is "MC".</returns>
-        public string Vehicle()
+        public override string VehicleType()
         {
             return "MC";
         }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class Car
+    /// <summary>
+    /// represents a car that inherits from VehicleBase
+    /// </summary>
+    public class Car : VehicleBase
     {
         /// <summary>
         /// Registration number of the car
@@ -19,21 +22,21 @@ namespace Bridge
         public DateTime Date { get; set; }
 
         /// <summary>
-        /// Gets the fixed price value.
+        /// inherits from VehicleBase.
         /// </summary>
-        /// <returns>The price as a <see cref="double"/>.</returns>
-        public double Price()
+        /// <returns></returns>
+        public override double Price()
         {
-                       return 230.0;
+            return 230.0;
         }
 
         /// <summary>
-        /// Returns the type of the vehicle (car).
+        /// inherits from VehicleBase.
         /// </summary>
-        /// <returns>A string containing the word "Car".</returns>
-        public string VehicleType()
+        /// <returns></returns>
+        public override string VehicleType()
         {
-                       return "Car";
-        }   
+            return "Car";
+        }
     }
 }
