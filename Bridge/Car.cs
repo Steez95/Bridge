@@ -12,11 +12,6 @@ namespace Bridge
     public class Car : VehicleBase
     {
         /// <summary>
-        /// Registration number of the car
-        /// </summary>
-        public string Licenseplate { get; set; }
-
-        /// <summary>
         /// Gets or sets the date associated with this instance.
         /// </summary>
         public DateTime Date { get; set; }
