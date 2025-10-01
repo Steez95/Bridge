@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            represents a car that inherits from VehicleBase
+            </summary>
+        </member>
+        <member name="P:Bridge.Car.Licenseplate">
+            <summary>
+            Registration number of the car
+            </summary>
+        </member>
+        <member name="P:Bridge.Car.Date">
+            <summary>
+            Gets or sets the date associated with this instance.
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            inherits from VehicleBase.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            inherits from VehicleBase.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            Represents a motorcycle with a license plate number.
+            </summary>
+            <remarks>This class provides a property to store and retrieve the license plate number of the
+            motorcycle.</remarks>
+        </member>
+        <member name="P:Bridge.MC.Licenseplate">
+            <summary>
+            Gets or sets the license plate number of the motorcycle.
+            </summary>
+        </member>
+        <member name="P:Bridge.MC.Date">
+            <summary>
+            inherits from VehicleBase.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            Gets the fixed price of a motorcycle crossing.
+            </summary>
+            <returns>The price of the item as a <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            inherits from VehicleBase.
+            </summary>
+            <returns>A string representing the vehicle type. The default value is "MC".</returns>
+        </member>
+        <member name="P:Bridge.VehicleBase.Licenseplate">
+            <summary>
+            Gets or sets the license plate number of the vehicle.
+            License plate must not exceed 7 characters, otherwise and excepition is thrown.
+            </summary>
+        </member>
+        <member name="P:Bridge.VehicleBase.Date">
+            <summary>
+            Gets or sets the date associated with this instance.
+            </summary>
+        </member>
+        <member name="P:Bridge.VehicleBase.Brobizz">
+             <summary>
+             If Brobizz is used, discount is given.
+            </summary>
+        </member>
+        <member name="M:Bridge.VehicleBase.Price">
+            <summary>
+            returns the fixed price crossing vehicle.
+            Must be implemented in derived/child classes.
+            </summary>
+            <returns>The price as a double-precision floating-point number.</returns>
+        </member>
+        <member name="M:Bridge.VehicleBase.VehicleType">
+            <summary>
+            Gets/returns the type of the vehicle as a string.
+            Must be implemented in derived/child classes.
+            </summary>
+            <returns>A string representing the type of the vehicle, such as "Car", "Truck", or "Motorcycle".</returns>
+        </member>
+    </members>
+</doc>
